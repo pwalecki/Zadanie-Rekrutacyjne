@@ -2,8 +2,8 @@ import UIKit
 
 struct Elements{
     
-//    static let sharedInstance = Elements()
-//    private init () {}
+   static var sharedInstance = Elements()
+    private init () {}
     var elementsArray: [Element] = []
 
     mutating func addNewElement(){
@@ -13,7 +13,7 @@ struct Elements{
     }
     
     mutating func removeElement(element:Element){
-        let index = 0
+        var index = 0
         
         for elementTmp:Element in elementsArray {
             
@@ -21,7 +21,7 @@ struct Elements{
                 elementsArray.remove(at: index)
                 break;
             }
-                index+1
+                index += 1
         }
     }
     
@@ -36,5 +36,31 @@ struct Elements{
     func arrayCount() -> Int {
         return elementsArray.count
     }
+    
+    mutating func increaseCounterInARandomElement() {
+        elementsArray[randomIndex()].counter += 1
+    }
+    
+    mutating func resetCounterInARandomElement(){
+        elementsArray[randomIndex()].counter = 0
+    }
+    
+    mutating func removeRandomElement() {
+        elementsArray.remove(at: randomIndex())
+    }
+    
+    mutating func addTwoCounter(){
+//        let randomIndex = randomIndex()
+//
+//        elementsArray[randomIndex].counter += elementsArray[randomIndex+1].counter
+        
+    }
+    
+    func randomIndex() -> Int {
+        
+        return Int(arc4random_uniform(UInt32(elementsArray.count)))
+        
+    }
+    
     
 }
