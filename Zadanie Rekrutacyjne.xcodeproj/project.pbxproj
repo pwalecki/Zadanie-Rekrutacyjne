@@ -16,6 +16,10 @@
 		F97AB7B520DCEDCA00E5935D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F97AB7B720DCEDCA00E5935D /* Localizable.strings */; };
 		F97AB7BB20DCEF0500E5935D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AB7BA20DCEF0500E5935D /* BaseViewController.swift */; };
 		F97AB7BE20DCEF6500E5935D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AB7BD20DCEF6500E5935D /* MainViewController.swift */; };
+		F9E0649620DCF5FD000F8C77 /* ElementViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E0649520DCF5FD000F8C77 /* ElementViewCell.swift */; };
+		F9E0649820DCFBB7000F8C77 /* ElementColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E0649720DCFBB7000F8C77 /* ElementColor.swift */; };
+		F9E0649A20DD0C44000F8C77 /* Elements.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E0649920DD0C44000F8C77 /* Elements.swift */; };
+		F9E0649C20DD151E000F8C77 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E0649B20DD151E000F8C77 /* Element.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		F97AB7B920DCEDD900E5935D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F97AB7BA20DCEF0500E5935D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F97AB7BD20DCEF6500E5935D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F9E0649520DCF5FD000F8C77 /* ElementViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementViewCell.swift; sourceTree = "<group>"; };
+		F9E0649720DCFBB7000F8C77 /* ElementColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementColor.swift; sourceTree = "<group>"; };
+		F9E0649920DD0C44000F8C77 /* Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elements.swift; sourceTree = "<group>"; };
+		F9E0649B20DD151E000F8C77 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +154,9 @@
 		F97AB7AE20DCECD100E5935D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F9E0649720DCFBB7000F8C77 /* ElementColor.swift */,
+				F9E0649920DD0C44000F8C77 /* Elements.swift */,
+				F9E0649B20DD151E000F8C77 /* Element.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,9 +181,18 @@
 		F97AB7BC20DCEF0E00E5935D /* Main View */ = {
 			isa = PBXGroup;
 			children = (
+				F97AB7C020DCF56A00E5935D /* Cell */,
 				F97AB7BD20DCEF6500E5935D /* MainViewController.swift */,
 			);
 			path = "Main View";
+			sourceTree = "<group>";
+		};
+		F97AB7C020DCF56A00E5935D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F9E0649520DCF5FD000F8C77 /* ElementViewCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +327,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E0649820DCFBB7000F8C77 /* ElementColor.swift in Sources */,
 				F97AB7BE20DCEF6500E5935D /* MainViewController.swift in Sources */,
+				F9E0649A20DD0C44000F8C77 /* Elements.swift in Sources */,
+				F9E0649620DCF5FD000F8C77 /* ElementViewCell.swift in Sources */,
 				F97AB78020DCECB400E5935D /* AppDelegate.swift in Sources */,
+				F9E0649C20DD151E000F8C77 /* Element.swift in Sources */,
 				F97AB7BB20DCEF0500E5935D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
