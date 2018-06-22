@@ -97,12 +97,11 @@
 		F97AB77E20DCECB400E5935D /* Zadanie Rekrutacyjne */ = {
 			isa = PBXGroup;
 			children = (
+				F97AB7AE20DCECD100E5935D /* Model */,
+				F97AB7AF20DCECDC00E5935D /* View */,
+				F97AB7B020DCECE800E5935D /* Controller */,
 				F97AB77F20DCECB400E5935D /* AppDelegate.swift */,
-				F97AB78120DCECB400E5935D /* ViewController.swift */,
-				F97AB78320DCECB400E5935D /* Main.storyboard */,
-				F97AB78620DCECB500E5935D /* Assets.xcassets */,
-				F97AB78820DCECB500E5935D /* LaunchScreen.storyboard */,
-				F97AB78B20DCECB500E5935D /* Info.plist */,
+				F97AB7AD20DCECBC00E5935D /* Supporting files */,
 			);
 			path = "Zadanie Rekrutacyjne";
 			sourceTree = "<group>";
@@ -123,6 +122,39 @@
 				F97AB7A120DCECB500E5935D /* Info.plist */,
 			);
 			path = "Zadanie RekrutacyjneUITests";
+			sourceTree = "<group>";
+		};
+		F97AB7AD20DCECBC00E5935D /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				F97AB78B20DCECB500E5935D /* Info.plist */,
+				F97AB78820DCECB500E5935D /* LaunchScreen.storyboard */,
+				F97AB78620DCECB500E5935D /* Assets.xcassets */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		F97AB7AE20DCECD100E5935D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F97AB7AF20DCECDC00E5935D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F97AB78320DCECB400E5935D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F97AB7B020DCECE800E5935D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F97AB78120DCECB400E5935D /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -417,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -432,7 +464,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HAPHZB635;
-				INFOPLIST_FILE = "Zadanie Rekrutacyjne/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Zadanie Rekrutacyjne/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +483,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HAPHZB635;
-				INFOPLIST_FILE = "Zadanie Rekrutacyjne/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Zadanie Rekrutacyjne/Supporting files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
