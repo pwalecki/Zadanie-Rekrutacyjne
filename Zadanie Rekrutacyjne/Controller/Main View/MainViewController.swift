@@ -15,12 +15,13 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var stopResetButton: UIButton!
     
-    var elements = Elements()
+    var timer : MainTimer = MainTimer()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        timer = MainTimer(viewController: self)
         // Do any additional setup after loading the view.
     }
 
@@ -33,26 +34,33 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
     // Mark: - Buttons Action
     
     @IBAction func startTimerAction(_ sender: Any) {
-        elements.addNewElement()
-        collectionView.reloadData()
+        timer.startTimer()
     }
     
 
     @IBAction func stopResetTimerAction(_ sender: Any) {
-        elements.removeAllElements()
+        if timer.isTimerRunning{
+        timer.stopTimer()
+        }else{
+            Elements.sharedInstance.removeAllElements()
+            collectionView.reloadData()
+        }
+    }
+    
+    func reloadCollectionView() {
         collectionView.reloadData()
     }
     
     // Mark: - Collection View Methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return elements.arrayCount()
+        return Elements.sharedInstance.arrayCount()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ElementViewCell =  collectionView.dequeueReusableCell(withReuseIdentifier:    elementCellIdentifier , for: indexPath) as! ElementViewCell
         
-            cell.setContentViewWithElement(element: elements.returnElemenetByIndex(index: indexPath.row))
+            cell.setContentViewWithElement(element: Elements.sharedInstance.returnElemenetByIndex(index: indexPath.row))
         
         return cell;
         
