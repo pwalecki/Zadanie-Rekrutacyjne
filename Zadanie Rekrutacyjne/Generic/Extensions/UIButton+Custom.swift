@@ -17,4 +17,10 @@ extension UIButton{
         self.tintColor = color
     }
     
+    func changeTintColor(tintColor:UIColor){
+        self.tintColor = tintColor
+        self.setTitleColor(tintColor, for: UIControlState.normal)
+        self.layer.borderColor = tintColor.cgColor
+    }
+    
 }

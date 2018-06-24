@@ -38,27 +38,41 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
         
         //Buttons
         startButton.setLayer()
-        startButton.setImageTitleAndColor(image: UIImage(named: "round_play_circle_outline_black_36dp")!, titleText: "start_button".localized, color: UIColor.green)
+        startButton.setImageTitleAndColor(image: UIImage(named: "round_play_circle_outline_black_36dp")!, titleText: "start_button".localized, color: UIColor.startButtonColor())
         
         stopResetButton.setLayer()
-        stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_pause_circle_outline_black_36dp")!, titleText: "stop_button".localized, color: UIColor.red)
+        stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_pause_circle_outline_black_36dp")!, titleText: "stop_button".localized, color: UIColor.stopButtonNoActiveColor())
     }
     
     // MARK: - Buttons Action
     
     @IBAction func startTimerAction(_ sender: Any) {
-        noElementsLabel.isHidden = true
-        timer.startTimer()
+        
+        if !timer.isTimerRunning {
+            noElementsLabel.isHidden = true
+            timer.startTimer()
+            
+            if stopResetButton.titleLabel?.text == "reset_button".localized {
+                stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_pause_circle_outline_black_36dp")!, titleText: "stop_button".localized, color: UIColor.stopButtonActiveColor())
+            }else{
+                stopResetButton.changeTintColor(tintColor: UIColor.stopButtonActiveColor())
+            }
+        }
     }
     
     
     @IBAction func stopResetTimerAction(_ sender: Any) {
         if timer.isTimerRunning{
             timer.stopTimer()
-            stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_clear_black_36dp")!, titleText: "reset_button".localized, color: UIColor.red)
-        }else{
+            stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_clear_black_36dp")!, titleText: "reset_button".localized, color: UIColor.stopButtonActiveColor())
+            
+            if Elements.sharedInstance.arrayCount() == 0{
+                noElementsLabel.isHidden = false
+                stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_pause_circle_outline_black_36dp")!, titleText: "stop_button".localized, color: UIColor.stopButtonNoActiveColor())
+            }
+        }else if Elements.sharedInstance.arrayCount() > 0{
             Elements.sharedInstance.removeAllElements()
-            stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_pause_circle_outline_black_36dp")!, titleText: "stop_button".localized, color: UIColor.red)
+            stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_pause_circle_outline_black_36dp")!, titleText: "stop_button".localized, color: UIColor.stopButtonNoActiveColor())
             collectionView.reloadData()
             noElementsLabel.isHidden = false
         }
