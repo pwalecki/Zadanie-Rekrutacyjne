@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F936939B20DF80AC0008B788 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936939A20DF80AC0008B788 /* String+Localization.swift */; };
 		F97AB78020DCECB400E5935D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AB77F20DCECB400E5935D /* AppDelegate.swift */; };
 		F97AB78520DCECB400E5935D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97AB78320DCECB400E5935D /* Main.storyboard */; };
 		F97AB78720DCECB500E5935D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F97AB78620DCECB500E5935D /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F936939A20DF80AC0008B788 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		F97AB77C20DCECB400E5935D /* Zadanie Rekrutacyjne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zadanie Rekrutacyjne.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97AB77F20DCECB400E5935D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F97AB78420DCECB400E5935D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +94,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F936939820DF80540008B788 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				F936939920DF806B0008B788 /* Extensions */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		F936939920DF806B0008B788 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F936939A20DF80AC0008B788 /* String+Localization.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F97AB77320DCECB400E5935D = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +133,7 @@
 		F97AB77E20DCECB400E5935D /* Zadanie Rekrutacyjne */ = {
 			isa = PBXGroup;
 			children = (
+				F936939820DF80540008B788 /* Generic */,
 				F97AB7AE20DCECD100E5935D /* Model */,
 				F97AB7AF20DCECDC00E5935D /* View */,
 				F97AB7B020DCECE800E5935D /* Controller */,
@@ -333,6 +352,7 @@
 				F9E0649820DCFBB7000F8C77 /* ElementColor.swift in Sources */,
 				F97AB7BE20DCEF6500E5935D /* MainViewController.swift in Sources */,
 				F9E0649A20DD0C44000F8C77 /* Elements.swift in Sources */,
+				F936939B20DF80AC0008B788 /* String+Localization.swift in Sources */,
 				F9E0649620DCF5FD000F8C77 /* ElementViewCell.swift in Sources */,
 				F97AB78020DCECB400E5935D /* AppDelegate.swift in Sources */,
 				F9E0649C20DD151E000F8C77 /* Element.swift in Sources */,
