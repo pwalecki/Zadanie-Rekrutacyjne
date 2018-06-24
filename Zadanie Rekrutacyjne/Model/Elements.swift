@@ -2,10 +2,10 @@ import UIKit
 
 struct Elements{
     
-   static var sharedInstance = Elements()
+    static var sharedInstance = Elements()
     private init () {}
     var elementsArray: [Element] = []
-
+    
     mutating func addNewElement(){
         let idElementu = elementsArray.count+1
         elementsArray.append(Element(id: idElementu))
@@ -21,14 +21,14 @@ struct Elements{
                 elementsArray.remove(at: index)
                 break;
             }
-                index += 1
+            index += 1
         }
     }
     
     mutating func removeAllElements() {
         elementsArray.removeAll()
     }
-
+    
     func returnElemenetByIndex(index:Int) -> Element {
         return elementsArray[index]
     }
@@ -50,10 +50,13 @@ struct Elements{
     }
     
     mutating func addTwoCounter(){
-//        let randomIndex = randomIndex()
-//
-//        elementsArray[randomIndex].counter += elementsArray[randomIndex+1].counter
-        
+        let index = randomIndex()
+        if index > 0 {
+            elementsArray[index].counter += elementsArray[index-1].counter
+            elementsArray[index].counter = elementsArray[index].counter % elementsArray.count
+        }else{
+            elementsArray[index].counter = elementsArray[index].counter % elementsArray.count
+        }
     }
     
     func randomIndex() -> Int {

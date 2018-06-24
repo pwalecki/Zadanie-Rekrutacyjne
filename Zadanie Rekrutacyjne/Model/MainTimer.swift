@@ -8,7 +8,6 @@ class MainTimer: NSObject {
     var viewController:MainViewController?
     
     override init() {
-        
         self.viewController  = nil
     }
     
@@ -16,14 +15,14 @@ class MainTimer: NSObject {
         self.viewController = viewController
     }
     
-     func startTimer() {
+    func startTimer() {
         if !isTimerRunning{
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction) , userInfo: nil, repeats: true)
             isTimerRunning = true
         }
     }
     
-     func stopTimer(){
+    func stopTimer(){
         timer.invalidate()
         isTimerRunning = false
     }
@@ -38,14 +37,12 @@ class MainTimer: NSObject {
             actionIf5Elements()
             break
         default:
-            print("cos poszło nie tak")
             break
         }
     }
     
     func actionIf5Elements(){
         let randomNumber = Int(arc4random_uniform(UInt32(100)))
-        print(randomNumber)
         switch randomNumber {
         case 0...49:
             Elements.sharedInstance.increaseCounterInARandomElement()
