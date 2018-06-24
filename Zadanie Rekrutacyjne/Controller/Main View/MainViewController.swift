@@ -12,15 +12,12 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
     
     var timer : MainTimer = MainTimer()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         timer = MainTimer(viewController: self)
         prepareView()
         // Do any additional setup after loading the view.
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,6 +32,7 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
         
         //CollectionView
         collectionView.backgroundColor  = UIColor.clear
+        collectionView.setCollectionViewLayout(DecorationFlowLayout(), animated: true)
         
         //Buttons
         startButton.setLayer()
@@ -59,7 +57,6 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
             }
         }
     }
-    
     
     @IBAction func stopResetTimerAction(_ sender: Any) {
         if timer.isTimerRunning{
@@ -96,8 +93,17 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
         return cell;
         
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: CELL_WIDTH, height: CELL_HEIGHT)
+    }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let viewWidth = UIScreen.main.bounds.size.width/2
+        let leftInset = (viewWidth - CGFloat(CELL_WIDTH)*1.5)
+        let rightInset = leftInset
+        
+        return UIEdgeInsets(top: 0, left: CGFloat(leftInset), bottom: 0, right: CGFloat(rightInset))
         
     }
+    
 }

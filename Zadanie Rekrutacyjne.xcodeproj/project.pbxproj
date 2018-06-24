@@ -10,6 +10,8 @@
 		F936939B20DF80AC0008B788 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936939A20DF80AC0008B788 /* String+Localization.swift */; };
 		F936939F20DF89860008B788 /* UIButton+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F936939E20DF89860008B788 /* UIButton+Custom.swift */; };
 		F93693A120DF9D150008B788 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93693A020DF9D150008B788 /* UIColor+Custom.swift */; };
+		F93693A420DFA80F0008B788 /* DecoratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93693A320DFA80F0008B788 /* DecoratorView.swift */; };
+		F93693A620DFAD650008B788 /* DecorationFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93693A520DFAD650008B788 /* DecorationFlowLayout.swift */; };
 		F97AB78020DCECB400E5935D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97AB77F20DCECB400E5935D /* AppDelegate.swift */; };
 		F97AB78520DCECB400E5935D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F97AB78320DCECB400E5935D /* Main.storyboard */; };
 		F97AB78720DCECB500E5935D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F97AB78620DCECB500E5935D /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		F936939A20DF80AC0008B788 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		F936939E20DF89860008B788 /* UIButton+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Custom.swift"; sourceTree = "<group>"; };
 		F93693A020DF9D150008B788 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		F93693A320DFA80F0008B788 /* DecoratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoratorView.swift; sourceTree = "<group>"; };
+		F93693A520DFAD650008B788 /* DecorationFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorationFlowLayout.swift; sourceTree = "<group>"; };
 		F97AB77C20DCECB400E5935D /* Zadanie Rekrutacyjne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zadanie Rekrutacyjne.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F97AB77F20DCECB400E5935D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F97AB78420DCECB400E5935D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 				F93693A020DF9D150008B788 /* UIColor+Custom.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F93693A220DFA7BB0008B788 /* Decoration View */ = {
+			isa = PBXGroup;
+			children = (
+				F93693A320DFA80F0008B788 /* DecoratorView.swift */,
+				F93693A520DFAD650008B788 /* DecorationFlowLayout.swift */,
+			);
+			name = "Decoration View";
 			sourceTree = "<group>";
 		};
 		F97AB77320DCECB400E5935D = {
@@ -209,6 +222,7 @@
 		F97AB7BC20DCEF0E00E5935D /* Main View */ = {
 			isa = PBXGroup;
 			children = (
+				F93693A220DFA7BB0008B788 /* Decoration View */,
 				F97AB7C020DCF56A00E5935D /* Cell */,
 				F97AB7BD20DCEF6500E5935D /* MainViewController.swift */,
 			);
@@ -363,8 +377,10 @@
 				F9E0649620DCF5FD000F8C77 /* ElementViewCell.swift in Sources */,
 				F97AB78020DCECB400E5935D /* AppDelegate.swift in Sources */,
 				F936939F20DF89860008B788 /* UIButton+Custom.swift in Sources */,
+				F93693A420DFA80F0008B788 /* DecoratorView.swift in Sources */,
 				F9E0649C20DD151E000F8C77 /* Element.swift in Sources */,
 				F97AB7BB20DCEF0500E5935D /* BaseViewController.swift in Sources */,
+				F93693A620DFAD650008B788 /* DecorationFlowLayout.swift in Sources */,
 				F9E0649E20DD27B8000F8C77 /* MainTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
