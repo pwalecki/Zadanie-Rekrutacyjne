@@ -1,11 +1,3 @@
-//
-//  ElementViewCell.swift
-//  Zadanie Rekrutacyjne
-//
-//  Created by Paweł Walecki on 22.06.2018.
-//  Copyright © 2018 Paweł Walecki. All rights reserved.
-//
-
 import UIKit
 
 let elementCellIdentifier = "elementCellIdentifier"

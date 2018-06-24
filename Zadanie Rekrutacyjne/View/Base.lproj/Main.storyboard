@@ -82,6 +82,12 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="eI1-tC-GIA"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFh-rM-z63">
+                                <rect key="frame" x="10" y="303.5" width="355" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLb-T2-jSL">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
@@ -89,7 +95,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7u-cP-hPp">
-                                                <rect key="frame" x="10" y="15" width="167.5" height="30"/>
+                                                <rect key="frame" x="10" y="5" width="167.5" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="startTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e9p-KB-FEp"/>
@@ -99,7 +105,9 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="R7u-cP-hPp" secondAttribute="trailing" constant="10" id="1oe-Bl-BKN"/>
+                                            <constraint firstItem="R7u-cP-hPp" firstAttribute="top" secondItem="0gu-ST-iZm" secondAttribute="top" constant="5" id="JsK-6D-ppZ"/>
                                             <constraint firstItem="R7u-cP-hPp" firstAttribute="centerY" secondItem="0gu-ST-iZm" secondAttribute="centerY" id="Kcc-vv-Tgm"/>
+                                            <constraint firstAttribute="bottom" secondItem="R7u-cP-hPp" secondAttribute="bottom" constant="5" id="SBs-sc-ND2"/>
                                             <constraint firstItem="R7u-cP-hPp" firstAttribute="leading" secondItem="0gu-ST-iZm" secondAttribute="leading" constant="10" id="UMh-pf-j1d"/>
                                             <constraint firstItem="R7u-cP-hPp" firstAttribute="centerX" secondItem="0gu-ST-iZm" secondAttribute="centerX" id="pNJ-TN-xd6"/>
                                         </constraints>
@@ -108,7 +116,7 @@
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a03-5F-x59">
-                                                <rect key="frame" x="10" y="15" width="167.5" height="30"/>
+                                                <rect key="frame" x="10" y="5" width="167.5" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="stopResetTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2w-b4-JHB"/>
@@ -118,9 +126,11 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="a03-5F-x59" firstAttribute="leading" secondItem="Ap4-ny-SdZ" secondAttribute="leading" constant="10" id="JGI-B6-rMR"/>
+                                            <constraint firstAttribute="bottom" secondItem="a03-5F-x59" secondAttribute="bottom" constant="5" id="M2E-uP-hJR"/>
                                             <constraint firstItem="a03-5F-x59" firstAttribute="centerY" secondItem="Ap4-ny-SdZ" secondAttribute="centerY" id="cCe-MZ-K85"/>
                                             <constraint firstAttribute="trailing" secondItem="a03-5F-x59" secondAttribute="trailing" constant="10" id="nJ4-xJ-lH7"/>
                                             <constraint firstItem="a03-5F-x59" firstAttribute="centerX" secondItem="Ap4-ny-SdZ" secondAttribute="centerX" id="sB0-Ld-RzT"/>
+                                            <constraint firstItem="a03-5F-x59" firstAttribute="top" secondItem="Ap4-ny-SdZ" secondAttribute="top" constant="5" id="y5a-cu-hJw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -142,17 +152,22 @@
                         <constraints>
                             <constraint firstItem="PLb-T2-jSL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="14U-wC-Wt4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PLb-T2-jSL" secondAttribute="trailing" id="23r-IC-pEg"/>
+                            <constraint firstItem="sFh-rM-z63" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="8KH-EW-hBO"/>
                             <constraint firstItem="PLb-T2-jSL" firstAttribute="top" secondItem="CFQ-Yz-D9c" secondAttribute="bottom" id="BFq-kD-GCq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CFQ-Yz-D9c" secondAttribute="trailing" id="MUx-hK-H8H"/>
                             <constraint firstItem="CFQ-Yz-D9c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VXm-Ua-e37"/>
                             <constraint firstItem="CFQ-Yz-D9c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bfk-4i-sxu"/>
+                            <constraint firstItem="sFh-rM-z63" firstAttribute="centerY" secondItem="CFQ-Yz-D9c" secondAttribute="centerY" id="eM0-s6-6Vc"/>
                             <constraint firstItem="PLb-T2-jSL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mFI-7I-9wa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sFh-rM-z63" secondAttribute="trailing" constant="10" id="vbX-xl-jJK"/>
+                            <constraint firstItem="sFh-rM-z63" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z8h-g8-DZz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="buttonView" destination="PLb-T2-jSL" id="iwK-uw-trD"/>
                         <outlet property="collectionView" destination="CFQ-Yz-D9c" id="czl-dr-xrg"/>
+                        <outlet property="noElementsLabel" destination="sFh-rM-z63" id="JJp-Ew-h9D"/>
                         <outlet property="startButton" destination="R7u-cP-hPp" id="P4d-D4-3vU"/>
                         <outlet property="stopResetButton" destination="a03-5F-x59" id="FLx-by-n9k"/>
                     </connections>
