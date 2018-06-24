@@ -36,9 +36,16 @@ class ElementViewCell: UICollectionViewCell {
     }
     
     func setContentViewWithElement(element:Element){
-
-            circleContentView.backgroundColor = element.elementColor.value
+        
+        circleContentView.backgroundColor = element.elementColor.value
+        
+        if element.elementColor == ElementColor.blueElement {
+            counterLabel.text =  String(element.counter * 3)
+        }else{
             counterLabel.text =  String(element.counter)
+        }
+        
+        
     }
-
+    
 }
