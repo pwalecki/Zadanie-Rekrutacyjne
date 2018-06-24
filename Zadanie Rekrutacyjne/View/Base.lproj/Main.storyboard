@@ -102,7 +102,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="R7u-cP-hPp" secondAttribute="trailing" constant="10" id="1oe-Bl-BKN"/>
                                             <constraint firstItem="R7u-cP-hPp" firstAttribute="top" secondItem="0gu-ST-iZm" secondAttribute="top" constant="5" id="JsK-6D-ppZ"/>
@@ -123,7 +123,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="a03-5F-x59" firstAttribute="leading" secondItem="Ap4-ny-SdZ" secondAttribute="leading" constant="10" id="JGI-B6-rMR"/>
                                             <constraint firstAttribute="bottom" secondItem="a03-5F-x59" secondAttribute="bottom" constant="5" id="M2E-uP-hJR"/>
@@ -134,7 +134,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2yB-cJ-n2a"/>
                                     <constraint firstAttribute="bottom" secondItem="0gu-ST-iZm" secondAttribute="bottom" id="91T-ZU-ffk"/>

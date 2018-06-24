@@ -27,26 +27,24 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
         // Dispose of any resources that can be recreated.
     }
     
-    // Mark: - Methodes
+    // MARK: - Methodes
     
-    func prepareView(){
+    private func prepareView(){
         noElementsLabel.text = "no_elements_label".localized
-        buttonView.layer.borderColor = UIColor.lightGray.cgColor
-        buttonView.layer.borderWidth = 2.0
-        buttonView.layer.cornerRadius = 5.0
+        buttonView.backgroundColor = UIColor.clear
         
         //CollectionView
         collectionView.backgroundColor  = UIColor.clear
         
         //Buttons
         startButton.setLayer()
-        startButton.setImageTitleAndColor(image: UIImage(), titleText: "start_button".localized, color: UIColor.green)
+        startButton.setImageTitleAndColor(image: UIImage(named: "round_play_circle_outline_black_36dp")!, titleText: "start_button".localized, color: UIColor.green)
         
         stopResetButton.setLayer()
-        stopResetButton.setImageTitleAndColor(image: UIImage(), titleText: "stop_button".localized, color: UIColor.red)
+        stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_pause_circle_outline_black_36dp")!, titleText: "stop_button".localized, color: UIColor.red)
     }
     
-    // Mark: - Buttons Action
+    // MARK: - Buttons Action
     
     @IBAction func startTimerAction(_ sender: Any) {
         noElementsLabel.isHidden = true
@@ -57,20 +55,20 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
     @IBAction func stopResetTimerAction(_ sender: Any) {
         if timer.isTimerRunning{
             timer.stopTimer()
-            stopResetButton.setImageTitleAndColor(image: UIImage(), titleText: "reset_button".localized, color: UIColor.red)
+            stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_clear_black_36dp")!, titleText: "reset_button".localized, color: UIColor.red)
         }else{
             Elements.sharedInstance.removeAllElements()
-            stopResetButton.setImageTitleAndColor(image: UIImage(), titleText: "stop_button".localized, color: UIColor.red)
+            stopResetButton.setImageTitleAndColor(image: UIImage(named: "round_pause_circle_outline_black_36dp")!, titleText: "stop_button".localized, color: UIColor.red)
             collectionView.reloadData()
             noElementsLabel.isHidden = false
         }
     }
     
-    func reloadCollectionView() {
+    public func reloadCollectionView() {
         collectionView.reloadData()
     }
     
-    // Mark: - Collection View Methods
+    // MARK: - Collection View Methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Elements.sharedInstance.arrayCount()
@@ -88,17 +86,4 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
