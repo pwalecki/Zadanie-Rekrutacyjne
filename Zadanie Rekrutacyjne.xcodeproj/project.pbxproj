@@ -30,6 +30,7 @@
 		F9F244AA20E0F4100030D5F5 /* ElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F244A920E0F4100030D5F5 /* ElementTests.swift */; };
 		F9F244AC20E0F4E40030D5F5 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F244AB20E0F4E40030D5F5 /* TimerTests.swift */; };
 		F9F244AE20E0FA880030D5F5 /* ElementsColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F244AD20E0FA880030D5F5 /* ElementsColorTests.swift */; };
+		F9F244B020E0FF080030D5F5 /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F244AF20E0FF080030D5F5 /* MainViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		F9F244A920E0F4100030D5F5 /* ElementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTests.swift; sourceTree = "<group>"; };
 		F9F244AB20E0F4E40030D5F5 /* TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
 		F9F244AD20E0FA880030D5F5 /* ElementsColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsColorTests.swift; sourceTree = "<group>"; };
+		F9F244AF20E0FF080030D5F5 /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		F97AB79320DCECB500E5935D /* Zadanie RekrutacyjneTests */ = {
 			isa = PBXGroup;
 			children = (
+				F9F244AF20E0FF080030D5F5 /* MainViewControllerTests.swift */,
 				F9F244AD20E0FA880030D5F5 /* ElementsColorTests.swift */,
 				F9F244AB20E0F4E40030D5F5 /* TimerTests.swift */,
 				F9F244A920E0F4100030D5F5 /* ElementTests.swift */,
@@ -406,6 +409,7 @@
 				F9F244A820E0F33C0030D5F5 /* ElementsTest.swift in Sources */,
 				F9F244AE20E0FA880030D5F5 /* ElementsColorTests.swift in Sources */,
 				F9F244AC20E0F4E40030D5F5 /* TimerTests.swift in Sources */,
+				F9F244B020E0FF080030D5F5 /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

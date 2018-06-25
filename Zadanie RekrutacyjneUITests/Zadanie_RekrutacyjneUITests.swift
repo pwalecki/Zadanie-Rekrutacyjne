@@ -1,36 +1,43 @@
-//
-//  Zadanie_RekrutacyjneUITests.swift
-//  Zadanie RekrutacyjneUITests
-//
-//  Created by Paweł Walecki on 22.06.2018.
-//  Copyright © 2018 Paweł Walecki. All rights reserved.
-//
-
 import XCTest
 
 class Zadanie_RekrutacyjneUITests: XCTestCase {
-        
+    
+    var app : XCUIApplication!
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        continueAfterFailure = false
+        app = XCUIApplication()
+        app.launch()
+        
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testStartStopResetAction() {
+        var i = 0
+        
+        while i <= 20 {
+            app.buttons["start"].tap()
+            expectation(for: NSPredicate(format: "count => 5"), evaluatedWith: app.collectionViews.cells, handler: nil)
+            waitForExpectations(timeout: 10, handler: nil)
+            self.app.buttons["stopReset"].tap()
+                self.app.buttons["stopReset"].tap()
+            i += 1
+            }
+        }
+    
+    func testButton(){
+        var i = 0
+        while i < 50{
+            app.buttons["start"].tap()
+            app.buttons["stopReset"].tap()
+            i += 1
+        }
+        
     }
     
 }
