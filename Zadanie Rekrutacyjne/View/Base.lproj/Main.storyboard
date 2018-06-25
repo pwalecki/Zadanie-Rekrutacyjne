@@ -14,12 +14,12 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Zadanie_Rekrutacyjne" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Zadanie_Rekrutacyjne" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CFQ-Yz-D9c">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CFQ-Yz-D9c" userLabel="collectionView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="11" id="hB8-B0-Tw1">
@@ -87,6 +87,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7u-cP-hPp">
                                                 <rect key="frame" x="10" y="5" width="167.5" height="50"/>
+                                                <accessibility key="accessibilityConfiguration" label="start"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="startTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e9p-KB-FEp"/>
@@ -108,6 +109,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a03-5F-x59">
                                                 <rect key="frame" x="10" y="5" width="167.5" height="50"/>
+                                                <accessibility key="accessibilityConfiguration" label="stopReset"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="stopResetTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2w-b4-JHB"/>

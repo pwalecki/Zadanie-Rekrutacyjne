@@ -14,7 +14,7 @@ struct Elements{
     
     mutating func removeElement(element:Element){
         var index = 0
-        
+
         for elementTmp:Element in elementsArray {
             
             if elementTmp == element{
