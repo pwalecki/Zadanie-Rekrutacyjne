@@ -1,6 +1,5 @@
 import UIKit
 
-
 class MainTimer: NSObject {
     var timer : Timer!
     var isTimerRunning = false

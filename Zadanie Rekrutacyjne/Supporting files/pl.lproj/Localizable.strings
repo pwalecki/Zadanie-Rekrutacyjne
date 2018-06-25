@@ -1,7 +1,8 @@
-/* 
-  Localizable.strings
-  Zadanie Rekrutacyjne
 
-  Created by Paweł Walecki on 22.06.2018.
-  Copyright © 2018 Paweł Walecki. All rights reserved.
-*/
+//Button
+"start_button" = "Start";
+"stop_button" = "Stop";
+"reset_button" = "Reset";
+
+// label
+"no_elements_label" = "Brak elementów.\nNacisnij przycisk Start.";

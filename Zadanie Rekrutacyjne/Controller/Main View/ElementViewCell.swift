@@ -1,44 +1,35 @@
-//
-//  ElementViewCell.swift
-//  Zadanie Rekrutacyjne
-//
-//  Created by Paweł Walecki on 22.06.2018.
-//  Copyright © 2018 Paweł Walecki. All rights reserved.
-//
-
 import UIKit
 
 let elementCellIdentifier = "elementCellIdentifier"
+let CELL_WIDTH = 110
+let CELL_HEIGHT = 110
 
 class ElementViewCell: UICollectionViewCell {
     
-    
-    
-    @IBOutlet weak var contentShadowView: UIView!
     @IBOutlet weak var circleContentView: UIView!
     @IBOutlet weak var counterLabel: UILabel!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        contentShadowView.layer.shadowColor = UIColor.lightGray.cgColor
-        contentShadowView.layer.shadowRadius = 2
-        contentShadowView.layer.shadowOffset = CGSize(width: 0, height: 2)
-        contentShadowView.layer.shadowOpacity = 0.2
-        contentShadowView.clipsToBounds = true
-        contentShadowView.backgroundColor = UIColor.lightGray
-        contentShadowView.layer.cornerRadius = contentShadowView.frame.size.height/2
-        
+        circleContentView.layer.shadowColor = UIColor.black.cgColor
+        circleContentView.layer.shadowRadius = 2
+        circleContentView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        circleContentView.layer.shadowOpacity = 0.5
         circleContentView.clipsToBounds = true
-        circleContentView.layer.cornerRadius = circleContentView.frame.size.height/2
+        circleContentView.layer.cornerRadius = CGFloat(CELL_WIDTH-20)/2
         
     }
     
     func setContentViewWithElement(element:Element){
-
-            circleContentView.backgroundColor = element.elementColor.value
+        
+        circleContentView.backgroundColor = element.elementColor.value
+        
+        if element.elementColor == ElementColor.blueElement {
+            counterLabel.text =  String(element.counter * 3)
+        }else{
             counterLabel.text =  String(element.counter)
+        }      
     }
-
+    
 }
