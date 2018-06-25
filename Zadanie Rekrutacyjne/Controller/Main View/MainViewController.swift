@@ -10,7 +10,7 @@ class MainViewController: BaseViewController, UICollectionViewDelegate,UICollect
     //labels
     @IBOutlet weak var noElementsLabel: UILabel!
     
-    var timer : MainTimer = MainTimer()
+    var timer : MainTimer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
