@@ -49,7 +49,7 @@ struct Elements{
         elementsArray.remove(at: randomIndex())
     }
     
-    mutating func addTwoCounter(){
+    mutating func addTwoCounterModuloElementsCount(){
         let index = randomIndex()
         if index > 0 {
             elementsArray[index].counter += elementsArray[index-1].counter

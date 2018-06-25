@@ -40,9 +40,9 @@
                                                     <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8B-XF-aok">
-                                                            <rect key="frame" x="-1" y="9" width="42" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="-3.5" y="7.5" width="48" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -74,7 +74,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFh-rM-z63">
-                                <rect key="frame" x="10" y="303.5" width="355" height="20.5"/>
+                                <rect key="frame" x="166.5" y="303.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -145,14 +145,14 @@
                         <constraints>
                             <constraint firstItem="PLb-T2-jSL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="14U-wC-Wt4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PLb-T2-jSL" secondAttribute="trailing" id="23r-IC-pEg"/>
-                            <constraint firstItem="sFh-rM-z63" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="8KH-EW-hBO"/>
+                            <constraint firstItem="sFh-rM-z63" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8KH-EW-hBO"/>
                             <constraint firstItem="PLb-T2-jSL" firstAttribute="top" secondItem="CFQ-Yz-D9c" secondAttribute="bottom" id="BFq-kD-GCq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CFQ-Yz-D9c" secondAttribute="trailing" id="MUx-hK-H8H"/>
                             <constraint firstItem="CFQ-Yz-D9c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VXm-Ua-e37"/>
                             <constraint firstItem="CFQ-Yz-D9c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bfk-4i-sxu"/>
                             <constraint firstItem="sFh-rM-z63" firstAttribute="centerY" secondItem="CFQ-Yz-D9c" secondAttribute="centerY" id="eM0-s6-6Vc"/>
                             <constraint firstItem="PLb-T2-jSL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mFI-7I-9wa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sFh-rM-z63" secondAttribute="trailing" constant="10" id="vbX-xl-jJK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sFh-rM-z63" secondAttribute="trailing" id="vbX-xl-jJK"/>
                             <constraint firstItem="sFh-rM-z63" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z8h-g8-DZz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

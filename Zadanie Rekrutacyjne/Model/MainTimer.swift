@@ -33,14 +33,14 @@ class MainTimer: NSObject {
             viewController!.reloadCollectionView()
             break
         case 5:
-            actionIf5Elements()
+            actionIfFiveElements()
             break
         default:
             break
         }
     }
     
-    func actionIf5Elements(){
+    func actionIfFiveElements(){
         let randomNumber = Int(arc4random_uniform(UInt32(100)))
         switch randomNumber {
         case 0...49:
@@ -56,7 +56,7 @@ class MainTimer: NSObject {
             viewController?.reloadCollectionView()
             break
         case 95...100:
-            Elements.sharedInstance.addTwoCounter()
+            Elements.sharedInstance.addTwoCounterModuloElementsCount()
             viewController?.reloadCollectionView()
             break
         default:

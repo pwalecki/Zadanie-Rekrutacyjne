@@ -23,4 +23,18 @@ extension UIButton{
         self.layer.borderColor = tintColor.cgColor
     }
     
+    func disableButton(){
+        self.isEnabled = false
+        changeTintColor(tintColor: UIColor.noActiveButtonColor())
+    }
+    
+    func enableButtonWithColor(_ color:UIColor){
+        self.isEnabled = true
+        changeTintColor(tintColor: color)
+    }
+    
+    func enableButton(){
+        self.isEnabled = true
+    }
+    
 }
